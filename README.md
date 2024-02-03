@@ -18,6 +18,7 @@ from basic syntax to generics and error handling. It also includes deep dives on
 
 Read the course at **https://google.github.io/comprehensive-rust/**.
 
+
 ## Course Format and Target Audience
 
 The course is used internally at Google when teaching Rust to experienced
