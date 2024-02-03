@@ -172,7 +172,7 @@ help:
 	@echo "  install                install the binary in --path ."
 	@echo "  help                   Showing this help "
 	@echo "  clean                  clean all artifact files"
-	@echo "  commit {"my message"}  ie, git commit and push with defalut message"
+	@echo "  commit {"my message"}  ie, git commit and push with default message"
 	@echo "  status                 ie, git status"
 	@echo "  pull                   ie, git pull"
 	@echo ""
