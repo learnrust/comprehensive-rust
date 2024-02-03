@@ -176,3 +176,8 @@ help:
 	@echo "  pull                   ie, git pull"
 	@echo ""
 
+install-latex:
+	sudo dnf install -y pandoc
+	sudo dnf install -y google-noto-\*
+	sudo dnf install -y texlive-lua\*
+	sudo dnf install -y texlive-latex\*
