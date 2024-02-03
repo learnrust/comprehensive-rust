@@ -1,0 +1,521 @@
+.
+├── aspect-ratio-helper.py
+├── book.toml
+├── Cargo.lock
+├── Cargo.toml
+├── comprehensive-rust-dir-layout.txt
+├── CONTRIBUTING.md
+├── dprint.json
+├── LICENSE
+├── Makefile
+├── mdbook-course
+│   ├── Cargo.toml
+│   ├── README.md
+│   └── src
+│       ├── bin
+│       │   ├── course-content.rs
+│       │   ├── course-schedule.rs
+│       │   └── mdbook-course.rs
+│       ├── course.rs
+│       ├── frontmatter.rs
+│       ├── lib.rs
+│       ├── markdown.rs
+│       ├── replacements.rs
+│       └── timing_info.rs
+├── mdbook-exerciser
+│   ├── Cargo.toml
+│   ├── README.md
+│   └── src
+│       ├── lib.rs
+│       └── main.rs
+├── po
+│   ├── bn.po
+│   ├── da.po
+│   ├── de.po
+│   ├── el.po
+│   ├── es.po
+│   ├── fa.po
+│   ├── fr.po
+│   ├── id.po
+│   ├── it.po
+│   ├── ja.po
+│   ├── ko.po
+│   ├── pl.po
+│   ├── pt-BR.po
+│   ├── ro.po
+│   ├── ru.po
+│   ├── tr.po
+│   ├── uk.po
+│   ├── zh-CN.po
+│   └── zh-TW.po
+├── README.md
+├── rustfmt.toml
+├── src
+│   ├── android
+│   │   ├── aidl
+│   │   │   ├── birthday_service
+│   │   │   ├── changing.md
+│   │   │   ├── client.md
+│   │   │   ├── deploy.md
+│   │   │   ├── implementation.md
+│   │   │   ├── interface.md
+│   │   │   └── server.md
+│   │   ├── aidl.md
+│   │   ├── bpfmt.sh
+│   │   ├── build_all.sh
+│   │   ├── build-rules
+│   │   │   ├── binary
+│   │   │   ├── binary.md
+│   │   │   ├── library
+│   │   │   └── library.md
+│   │   ├── build-rules.md
+│   │   ├── interoperability
+│   │   │   ├── cpp
+│   │   │   ├── cpp.md
+│   │   │   ├── java
+│   │   │   ├── java.md
+│   │   │   ├── with-c
+│   │   │   └── with-c.md
+│   │   ├── interoperability.md
+│   │   ├── logging
+│   │   │   ├── Android.bp
+│   │   │   └── src
+│   │   ├── logging.md
+│   │   └── setup.md
+│   ├── android.md
+│   ├── async
+│   │   ├── async-await.md
+│   │   ├── channels.md
+│   │   ├── control-flow
+│   │   │   ├── join.md
+│   │   │   └── select.md
+│   │   ├── control-flow.md
+│   │   ├── futures.md
+│   │   ├── pitfalls
+│   │   │   ├── async-traits.md
+│   │   │   ├── blocking-executor.md
+│   │   │   ├── cancellation.md
+│   │   │   └── pin.md
+│   │   ├── pitfalls.md
+│   │   ├── runtimes
+│   │   │   └── tokio.md
+│   │   ├── runtimes.md
+│   │   └── tasks.md
+│   ├── async.md
+│   ├── bare-metal
+│   │   ├── alloc-example
+│   │   │   ├── Cargo.lock
+│   │   │   ├── Cargo.toml
+│   │   │   └── src
+│   │   ├── alloc.md
+│   │   ├── android
+│   │   │   └── vmbase.md
+│   │   ├── android.md
+│   │   ├── aps
+│   │   │   ├── better-uart
+│   │   │   ├── better-uart.md
+│   │   │   ├── entry-point.md
+│   │   │   ├── examples
+│   │   │   ├── exceptions.md
+│   │   │   ├── inline-assembly.md
+│   │   │   ├── logging
+│   │   │   ├── logging.md
+│   │   │   ├── mmio.md
+│   │   │   ├── other-projects.md
+│   │   │   ├── uart
+│   │   │   └── uart.md
+│   │   ├── aps.md
+│   │   ├── microcontrollers
+│   │   │   ├── board-support.md
+│   │   │   ├── debugging.md
+│   │   │   ├── embedded-hal.md
+│   │   │   ├── examples
+│   │   │   ├── hals.md
+│   │   │   ├── mmio.md
+│   │   │   ├── other-projects.md
+│   │   │   ├── pacs.md
+│   │   │   ├── probe-rs.md
+│   │   │   └── type-state.md
+│   │   ├── microcontrollers.md
+│   │   ├── minimal.md
+│   │   ├── no_std.md
+│   │   ├── useful-crates
+│   │   │   ├── aarch64-paging.md
+│   │   │   ├── allocator-example
+│   │   │   ├── buddy_system_allocator.md
+│   │   │   ├── spin.md
+│   │   │   ├── tinyvec.md
+│   │   │   ├── zerocopy-example
+│   │   │   └── zerocopy.md
+│   │   └── useful-crates.md
+│   ├── bare-metal.md
+│   ├── borrowing
+│   │   ├── borrowck.md
+│   │   ├── Cargo.toml
+│   │   ├── exercise.md
+│   │   ├── interior-mutability.md
+│   │   ├── shared.md
+│   │   └── solution.md
+│   ├── borrowing.md
+│   ├── cargo
+│   │   ├── code-samples.md
+│   │   ├── running-locally.md
+│   │   └── rust-ecosystem.md
+│   ├── cargo.md
+│   ├── chromium
+│   │   ├── adding-third-party-crates
+│   │   │   ├── checking-in.md
+│   │   │   ├── configuring-cargo-toml.md
+│   │   │   ├── configuring-gnrt-config-toml.md
+│   │   │   ├── depending-on-a-crate.md
+│   │   │   ├── downloading-crates.md
+│   │   │   ├── generating-gn-build-rules.md
+│   │   │   ├── keeping-up-to-date.md
+│   │   │   ├── resolving-problems
+│   │   │   ├── resolving-problems.md
+│   │   │   └── reviews-and-audits.md
+│   │   ├── adding-third-party-crates.md
+│   │   ├── build-rules
+│   │   │   ├── depending.md
+│   │   │   ├── unsafe.md
+│   │   │   ├── vscode.md
+│   │   │   └── vscode.png
+│   │   ├── build-rules.md
+│   │   ├── cargo.md
+│   │   ├── interoperability-with-cpp
+│   │   │   ├── error-handling.md
+│   │   │   ├── error-handling-png.md
+│   │   │   ├── error-handling-qr.md
+│   │   │   ├── example-bindings.md
+│   │   │   ├── limitations-of-cxx.md
+│   │   │   └── using-cxx-in-chromium.md
+│   │   ├── interoperability-with-cpp.md
+│   │   ├── policy.md
+│   │   ├── setup.md
+│   │   ├── testing
+│   │   │   ├── build-gn.md
+│   │   │   ├── chromium-import-macro.md
+│   │   │   └── rust-gtest-interop.md
+│   │   └── testing.md
+│   ├── chromium.md
+│   ├── concurrency
+│   │   ├── channels
+│   │   │   ├── bounded.md
+│   │   │   └── unbounded.md
+│   │   ├── channels.md
+│   │   ├── scoped-threads.md
+│   │   ├── send-sync
+│   │   │   ├── examples.md
+│   │   │   ├── send.md
+│   │   │   └── sync.md
+│   │   ├── send-sync.md
+│   │   ├── shared_state
+│   │   │   ├── arc.md
+│   │   │   ├── example.md
+│   │   │   └── mutex.md
+│   │   ├── shared_state.md
+│   │   └── threads.md
+│   ├── concurrency.md
+│   ├── control-flow-basics
+│   │   ├── blocks-and-scopes.md
+│   │   ├── break-continue.md
+│   │   ├── Cargo.toml
+│   │   ├── conditionals.md
+│   │   ├── exercise.md
+│   │   ├── exercise.rs
+│   │   ├── functions.md
+│   │   ├── loops.md
+│   │   ├── macros.md
+│   │   └── solution.md
+│   ├── control-flow-basics.md
+│   ├── credits.md
+│   ├── error-handling
+│   │   ├── Cargo.toml
+│   │   ├── error.md
+│   │   ├── exercise.md
+│   │   ├── exercise.rs
+│   │   ├── panics.md
+│   │   ├── solution.md
+│   │   ├── thiserror-and-anyhow.md
+│   │   ├── try-conversions.md
+│   │   └── try.md
+│   ├── error-handling.md
+│   ├── exercises
+│   │   ├── android
+│   │   │   └── morning.md
+│   │   ├── bare-metal
+│   │   │   ├── afternoon.md
+│   │   │   ├── compass
+│   │   │   ├── compass.md
+│   │   │   ├── morning.md
+│   │   │   ├── rtc
+│   │   │   ├── rtc.md
+│   │   │   ├── solutions-afternoon.md
+│   │   │   └── solutions-morning.md
+│   │   ├── Cargo.toml
+│   │   ├── chromium
+│   │   │   ├── bringing-it-together.md
+│   │   │   ├── build-rules.md
+│   │   │   ├── chwomium.png
+│   │   │   ├── interoperability-with-cpp.md
+│   │   │   ├── solutions.md
+│   │   │   ├── testing.md
+│   │   │   └── third-party.md
+│   │   └── concurrency
+│   │       ├── afternoon.md
+│   │       ├── chat-app.md
+│   │       ├── chat-async
+│   │       ├── dining-philosophers-async.md
+│   │       ├── dining-philosophers-async.rs
+│   │       ├── dining-philosophers.md
+│   │       ├── dining-philosophers.rs
+│   │       ├── link-checker.md
+│   │       ├── link-checker.rs
+│   │       ├── morning.md
+│   │       ├── solutions-afternoon.md
+│   │       └── solutions-morning.md
+│   ├── generics
+│   │   ├── Cargo.toml
+│   │   ├── exercise.md
+│   │   ├── exercise.rs
+│   │   ├── generic-data.md
+│   │   ├── generic-functions.md
+│   │   ├── impl-trait.md
+│   │   ├── solution.md
+│   │   └── trait-bounds.md
+│   ├── generics.md
+│   ├── glossary.md
+│   ├── hello-world
+│   │   ├── benefits.md
+│   │   ├── hello-world.md
+│   │   ├── playground.md
+│   │   └── what-is-rust.md
+│   ├── hello-world.md
+│   ├── index.md
+│   ├── iterators
+│   │   ├── Cargo.toml
+│   │   ├── exercise.md
+│   │   ├── exercise.rs
+│   │   ├── fromiterator.md
+│   │   ├── intoiterator.md
+│   │   ├── iterator.md
+│   │   └── solution.md
+│   ├── iterators.md
+│   ├── memory-management
+│   │   ├── approaches.md
+│   │   ├── Cargo.toml
+│   │   ├── clone.md
+│   │   ├── copy-types.md
+│   │   ├── drop.md
+│   │   ├── exercise.md
+│   │   ├── exercise.rs
+│   │   ├── move.md
+│   │   ├── ownership.md
+│   │   ├── review.md
+│   │   └── solution.md
+│   ├── memory-management.md
+│   ├── methods-and-traits
+│   │   ├── Cargo.toml
+│   │   ├── deriving.md
+│   │   ├── exercise.md
+│   │   ├── exercise.rs
+│   │   ├── methods.md
+│   │   ├── solution.md
+│   │   └── traits.md
+│   ├── methods-and-traits.md
+│   ├── modules
+│   │   ├── Cargo.toml
+│   │   ├── exercise.md
+│   │   ├── exercise.rs
+│   │   ├── filesystem.md
+│   │   ├── modules.md
+│   │   ├── paths.md
+│   │   ├── solution.md
+│   │   └── visibility.md
+│   ├── modules.md
+│   ├── other-resources.md
+│   ├── pattern-matching
+│   │   ├── Cargo.toml
+│   │   ├── destructuring.md
+│   │   ├── exercise.md
+│   │   ├── exercise.rs
+│   │   ├── let-control-flow.md
+│   │   └── solution.md
+│   ├── pattern-matching.md
+│   ├── README.md
+│   ├── references
+│   │   ├── Cargo.toml
+│   │   ├── exclusive.md
+│   │   ├── exercise.md
+│   │   ├── exercise.rs
+│   │   ├── shared.md
+│   │   └── solution.md
+│   ├── references.md
+│   ├── running-the-course
+│   │   ├── course-structure.md
+│   │   ├── keyboard-shortcuts.md
+│   │   └── translations.md
+│   ├── running-the-course.md
+│   ├── slices-and-lifetimes
+│   │   ├── Cargo.toml
+│   │   ├── exercise.md
+│   │   ├── exercise.rs
+│   │   ├── lifetime-annotations.md
+│   │   ├── lifetime-elision.md
+│   │   ├── slices.md
+│   │   ├── solution.md
+│   │   ├── str.md
+│   │   └── struct-lifetimes.md
+│   ├── slices-and-lifetimes.md
+│   ├── smart-pointers
+│   │   ├── box.md
+│   │   ├── Cargo.toml
+│   │   ├── exercise.md
+│   │   ├── exercise.rs
+│   │   ├── rc.md
+│   │   ├── solution.md
+│   │   └── trait-objects.md
+│   ├── smart-pointers.md
+│   ├── std-traits
+│   │   ├── Cargo.toml
+│   │   ├── casting.md
+│   │   ├── closures.md
+│   │   ├── comparisons.md
+│   │   ├── default.md
+│   │   ├── exercise.md
+│   │   ├── exercise.rs
+│   │   ├── from-and-into.md
+│   │   ├── operators.md
+│   │   ├── read-and-write.md
+│   │   └── solution.md
+│   ├── std-traits.md
+│   ├── std-types
+│   │   ├── Cargo.toml
+│   │   ├── docs.md
+│   │   ├── exercise.md
+│   │   ├── exercise.rs
+│   │   ├── hashmap.md
+│   │   ├── option.md
+│   │   ├── result.md
+│   │   ├── solution.md
+│   │   ├── std.md
+│   │   ├── string.md
+│   │   └── vec.md
+│   ├── std-types.md
+│   ├── SUMMARY.md
+│   ├── testing
+│   │   ├── Cargo.toml
+│   │   ├── exercise.md
+│   │   ├── exercise.rs
+│   │   ├── googletest.md
+│   │   ├── googletest.rs
+│   │   ├── lints.md
+│   │   ├── mockall.rs
+│   │   ├── mocking.md
+│   │   ├── other.md
+│   │   ├── solution.md
+│   │   ├── unit-tests.md
+│   │   └── useful-crates.md
+│   ├── testing.md
+│   ├── thanks.md
+│   ├── tuples-and-arrays
+│   │   ├── Cargo.toml
+│   │   ├── destructuring.md
+│   │   ├── exercise.md
+│   │   ├── exercise.rs
+│   │   ├── iteration.md
+│   │   ├── match.md
+│   │   ├── solution.md
+│   │   └── tuples-and-arrays.md
+│   ├── tuples-and-arrays.md
+│   ├── types-and-values
+│   │   ├── arithmetic.md
+│   │   ├── Cargo.toml
+│   │   ├── exercise.md
+│   │   ├── exercise.rs
+│   │   ├── inference.md
+│   │   ├── solution.md
+│   │   ├── strings.md
+│   │   ├── values.md
+│   │   └── variables.md
+│   ├── types-and-values.md
+│   ├── unsafe-rust
+│   │   ├── Cargo.toml
+│   │   ├── dereferencing.md
+│   │   ├── exercise.md
+│   │   ├── exercise.rs
+│   │   ├── mutable-static.md
+│   │   ├── solution.md
+│   │   ├── unions.md
+│   │   ├── unsafe-functions.md
+│   │   ├── unsafe.md
+│   │   └── unsafe-traits.md
+│   ├── unsafe-rust.md
+│   ├── user-defined-types
+│   │   ├── aliases.md
+│   │   ├── Cargo.toml
+│   │   ├── enums.md
+│   │   ├── exercise.md
+│   │   ├── exercise.rs
+│   │   ├── named-structs.md
+│   │   ├── solution.md
+│   │   ├── static-and-const.md
+│   │   └── tuple-structs.md
+│   ├── user-defined-types.md
+│   ├── welcome-day-1-afternoon.md
+│   ├── welcome-day-1.md
+│   ├── welcome-day-2-afternoon.md
+│   ├── welcome-day-2.md
+│   ├── welcome-day-3-afternoon.md
+│   ├── welcome-day-3.md
+│   ├── welcome-day-4-afternoon.md
+│   └── welcome-day-4.md
+├── STYLE.md
+├── theme
+│   ├── book.js
+│   ├── css
+│   │   ├── language-picker.css
+│   │   ├── rtl.css
+│   │   ├── speaker-notes.css
+│   │   └── svgbob.css
+│   ├── head.hbs
+│   ├── index.hbs
+│   └── speaker-notes.js
+├── third_party
+│   ├── cxx
+│   │   ├── blobstore
+│   │   │   ├── Android.bp
+│   │   │   ├── BUILD
+│   │   │   ├── build.rs
+│   │   │   ├── Cargo.toml
+│   │   │   ├── include
+│   │   │   └── src
+│   │   ├── book
+│   │   │   ├── snippets.cc
+│   │   │   └── snippets.rs
+│   │   ├── LICENSE-APACHE
+│   │   ├── LICENSE-MIT
+│   │   ├── overview.svg
+│   │   └── README.md
+│   ├── mdbook
+│   │   ├── book.js -> ../../theme/book.js
+│   │   ├── index.hbs -> ../../theme/index.hbs
+│   │   ├── LICENSE
+│   │   └── README.md
+│   ├── README.md
+│   ├── rust-by-example
+│   │   ├── destructuring-arrays.rs
+│   │   ├── destructuring-structs.rs
+│   │   ├── LICENSE-APACHE
+│   │   ├── LICENSE-MIT
+│   │   ├── match-guards.rs
+│   │   ├── README.md
+│   │   └── webevent.rs
+│   └── rust-on-exercism
+│       ├── health-statistics.md
+│       ├── health-statistics.rs
+│       ├── LICENSE
+│       └── README.md
+└── TRANSLATIONS.md
+
+88 directories, 430 files
