@@ -30,7 +30,6 @@ verbose = false # Report timing information.
 # command = "./aspect-ratio-helper.py"
 
 [output.pandoc]
-#optional = true
 optional = false
 
 [output.pandoc.profile.pdf]
