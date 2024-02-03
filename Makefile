@@ -6,9 +6,7 @@ NEWRELEASE	= $(shell echo $$(($(RELEASE) + 1)))
 PROJECT_NAME    = comprehensive-rust
 TOPDIR = $(shell pwd)
 MANPAGES =
-#A2PS2S1C  = /usr/bin/enscript -H1 --highlight-bar-gray=08 -fCourier8 -Ebash
 A2PS2S1C  = /usr/bin/enscript -H1 --highlight-bar-gray=08 -fCourier8 -Ebash  --non-printable-format=space
-#A2PS2S1C  = /usr/bin/enscript -H1 --highlight-bar-gray=08 -fconsolars7 -Ebash
 A2PSTMP   = ./tmp
 DOCS      = ./docs
 
@@ -45,9 +43,9 @@ clean_hardest: clean_rpms
 
 #Ref: https://stackoverflow.com/questions/1490949/how-to-write-loop-in-a-makefile
 # MANIFEST  
-SRC1= README.md Makefile Cargo.toml myapp_lightweight_service-dir-layout.txt
-SRC2= src/app.rs src/bin/main.rs  src/controllers/guide.rs  src/controllers/home2.rs  src/controllers/home.rs  src/controllers/mod.rs  src/lib.rs  src/views/home.rs  src/views/mod.rs
-SRC3= tests/requests/guide.rs  tests/requests/home2.rs  tests/requests/home.rs  tests/requests/mod.rs  tests/requests/snapshots/can_get_home2@home2_request.snap  tests/requests/snapshots/home2_request.snap tests/requests/snapshots/can_get_home@home_request.snap
+SRC1= README.md Makefile Cargo.toml comprehensive-rust-dir-layout.txt
+SRC2= src/app.rs src/bin/main.rs  
+SRC3= tests/requests/guide.rs  
 #SRC2= manage.py profiles_projects-dir-layout.txt
 
 tmpdir:
@@ -101,7 +99,7 @@ args = `arg="$(filter-out $@,$(MAKECMDGOALS))" && echo $${arg:-${1}}`
 status:
 	git status
 commit:
-	git commit -am "$(call args, Automated commit message without details, Please read the git diff)"  && git push
+	git commit -am "$(call args, Quick commit message, please read diffs)"  && git push
 pull:
 	git pull
 install:
