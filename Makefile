@@ -158,7 +158,8 @@ saas_pg:
 lightweight_service:
 	LOCO_APP_NAME=lightweight_service LOCO_TEMPLATE=lightweight-service loco new 
 
-
+book:
+	mdbook test 
 help:
 	@echo "Usage: make <target> <argument>"
 	@echo
